@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bhuvaneswari Sugumar — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animation CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- IMAGE LIGHTBOX -->
+  <div id="imageModal" class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img id="modalImage" class="modal-image" alt="Preview">
+  </div>
+
+  <!-- JOB INVITE MODAL -->
+  <div id="inviteModal" class="invite-modal">
+    <div class="invite-panel">
+      <button class="invite-close" onclick="closeInviteForm()">✕</button>
+      <h2>Send Job Invite</h2>
+      <form id="jobInviteForm">
+        <label>To (fixed)</label>
+        <input type="email" value="bhuvaneswarisugumar142@gmail.com" readonly>
+
+        <label>From</label>
+        <input id="from_email" type="email" placeholder="Your email" required>
+
+        <label>Company / Name</label>
+        <input id="company" type="text" placeholder="Company or your name">
+
+        <label>Message</label>
+        <textarea id="message" rows="5" placeholder="Type your job invite..." required></textarea>
+
+        <div class="invite-actions">
+          <button type="submit" class="btn primary">Send</button>
+          <button type="button" class="btn" onclick="closeInviteForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="section header">
+    <div class="header-inner">
+      <img src="bs.jpg"alt="Bhuvaneswari Sugumar" class="profile-img">
+      <div class="header-right">
+        <h1 class="name">Bhuvaneswari Sugumar</h1>
+        <p class="location">📍 Jayankondam</p>
+        <p class="role"><span id="typing"></span><span class="cursor">|</span></p>
+        <div class="header-buttons">
+          <a class="btn" href="BHUVANESWARI_SUGUMAR_PROFILE.pdf" download>📄 Resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/bhuvaneswari-sugumar-a33769294/" target="_blank">🔗 LinkedIn</a>
+          <a class="btn" href="https://github.com/Bhuvaneswarisugumar" target="_blank">💻 GitHub</a>
+          <a class="btn" href="https://wa.me/919629018597" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section about"data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m Bhuvaneswari Sugumar, a passionate and detail-oriented software developer with a strong foundation in 
+    <strong>Java,Python,SQL and frontend technologies</strong>.  
+    I enjoy building efficient, user-friendly solutions and continuously improving my technical skills.  
+    My interests range from developing web applications to exploring data structures and algorithms for 
+    optimized problem-solving.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills"data-aos="zoom-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span>
+      <span>Python</span><span>SQL</span><span>Data Structures</span><span>Algorithms</span><span>Springboot</span>
+      <span>Git</span><span>Github</span><span>Excel</span>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section education"data-aos="fade-right">
+    <h2>Education</h2>
+    <div class="edu-card"><strong>SASTRA University</strong> — B.Tech CSE (2021–2025) — CGPA: 6.838</div>
+    <div class="edu-card"><strong>SRV School</strong> — HSC: 91% | SSLC: 92%</div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects"data-aos="flip-left">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Automated Diagnosis of Fruits & Vegetables</h3>
+      <p>Developed an AI-powered application system for automated diagnosis of fruits and vegetables with features including classification, nutrient content prediction, disease detection, expiry estimation, and grade classification. Utilized Convolutional Neural Networks (CNN) for image analysis and found the results.Deployed the solution via Personal Image Classifier and integrated with MIT App Inventor, enabling mobile access and usability.<span><strong>Technologies Used: Python, Machine Learning, Jupyter Notebook, Personal Image Classifier, MIT App Inventor.</strong></span>
+</p><p>📅 Dec 2024 – May 2025</p>
+      <button class="btn" onclick="showModal('op1.png')">🔍 View Output</button>
+    </div>
+    <div class="project-card">
+      <h3>Predicting Electricity Prices</h3>
+      <p>Predicted future electricity prices using previous year datasets with machine learning techniques. Implemented three models: Ensemble, Random Forest, and a Probabilistic model, and deployed them using Modelbit for real-time inference. Developed a user-facing website using HTML, CSS, JavaScript, and Python to allow users to input data and view predicted prices.
+This system helps consumers and businesses plan their energy usage during low-cost periods, effectively reducing electricity expenses.<span><strong> Technologies Used: Python, Machine Learning Models, HTML, CSS, JavaScript, Jupyter Notebook</strong></span></p><p>📅 Feb 2024 – Jun 2024</p>
+      <button class="btn" onclick="showModal('op2.png')">🔍 View Output</button>
+    </div>
+    <div class="project-card">
+      <h3>Canteen Connect</h3>
+      <p>Developed a responsive canteen website using HTML, CSS, and JavaScript featuring a menu display, order placement, and dynamic updates for a user-friendly experience.Implemented interactive features like real-time food availability and order validation for seamless user interaction. The main motive for undertaking this project is to alleviate congestion during busy periods.<span><strong> Technologies Used: HTML, CSS, JavaScript, SQL</strong></span></p><p>📅 Nov 2023 – Jan 2024</p>
+      <button class="btn" onclick="showModal('op3.png')">🔍 View Output</button>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section certifications"data-aos="fade-up">
+    <h2>Certifications</h2>
+    <div class="cert-card">
+      Python – Great Learning 
+      <button class="btn" onclick="showModal('cert1.jpg')">🎓 View</button>
+    </div>
+    <div class="cert-card">
+      Web Dev Internship – Code Alpha 
+      <button class="btn" onclick="showModal('cert2.jpg')">🎓 View</button>
+    </div>
+    <div class="cert-card">
+      SQL – Geekster 
+      <button class="btn" onclick="showModal('cert3.jpg')">🎓 View</button>
+    </div>
+    <div class="cert-card">
+      Java - Geekster 
+      <button class="btn" onclick="showModal('cert4.jpg')">🎓 View</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact"data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:bhuvaneswarisugumar142@gmail.com">bhuvaneswarisugumar142@gmail.com</a></p>
+    <p>Phone: +91 9629018597</p>
+    <button class="btn primary" onclick="openInviteForm()">📨 Job Invite</button>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Bhuvaneswari Sugumar — Waiting for exciting opportunities 🚀</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- AOS Animation JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation duration
+    once: true      // Only animate once when scrolling
+  });
+</script>
+
+</body>
+</html>

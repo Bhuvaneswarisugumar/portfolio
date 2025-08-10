@@ -1,0 +1,194 @@
+body {
+  margin: 1;
+  font-family:Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #abb1bf, #aba3a7);
+  color: #151111;
+}
+
+.section {
+  padding: 30px;
+  margin: 20px;
+  border: 4px solid transparent;
+  border-radius: 12px;
+  background-clip: padding-box;
+  position: relative;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  border-radius: 12px;
+  padding: 3px; 
+  background: linear-gradient(45deg, #ff4081, #2196F3);
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color:#2d0128
+}
+.section h1{
+  font-family:'Bebas Neue', sans-serif;
+  font-size:35px;
+  color: #861fd0;
+}
+.section p{
+    background: rgba(255, 255, 255, 0.664);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #9a3888;
+}
+
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;      
+  gap: 10px;            
+  justify-content: center; }
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.header-buttons .btn {
+  margin: 5px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-grid span {
+  background: #fff3cd;
+  padding: 5px 10px;
+  border-radius: 8px;
+
+}
+
+.project-card, .cert-card, .edu-card {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.btn {
+  background: #ff4081;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #007bff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* IMAGE MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+
+.modal-close {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: white;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* INVITE MODAL */
+.invite-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.invite-panel {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: 5% auto;
+  border-radius: 8px;
+}
+
+.invite-panel input, .invite-panel textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.invite-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.invite-close {
+  float: right;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+}
